@@ -7,44 +7,31 @@ public class HlavniProgram {
     public void start() {
         zofka = new Turtle();
 
-        for (int i = 0; i < 4; i++) {
-            zofka.turnRight(90);
-            zofka.move(100);
-        }
-
-
-             zofka.turnRight(30);
-             zofka.move(100);
-        zofka.turnRight(120);
-        zofka.move(100);
-
+        nakresliDomecek();
+//posun
         zofka.penUp();
         zofka.turnRight(30);
         zofka.move(100);
         zofka.turnRight(90);
         zofka.move(400);
-
         zofka.penDown();
 
-            zofka.turnRight(90);
-            zofka.move(100);
-            zofka.turnRight(90);
-            zofka.move(130);
-        zofka.turnRight(90);
-        zofka.move(100);
-        zofka.turnRight(90);
-        zofka.move(130);
 
+        nakresliObdelnik();
+
+ //hlava
         zofka.turnRight(30);
         zofka.move(100);
         zofka.turnRight(120);
         zofka.move(100);
 
+//posun
         zofka.turnRight(120);
         zofka.penUp();
         zofka.move(100);
         zofka.turnLeft(90);
         zofka.move(32);
+
 //nozicky
         zofka.penDown();
         zofka.turnRight(120);
@@ -58,10 +45,11 @@ public class HlavniProgram {
         zofka.turnRight(180);
         zofka.move(30);
 
+ //posun
         zofka.turnRight(120);
         zofka.move(64);
 
-        //nozicky
+ //nozicky
         zofka.penDown();
         zofka.turnRight(120);
         zofka.move(30);
@@ -90,9 +78,33 @@ public class HlavniProgram {
 
         }
 
+    private void nakresliObdelnik() {
+        zofka.turnRight(90);
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.move(130);
+        zofka.turnRight(90);
+        zofka.move(100);
+        zofka.turnRight(90);
+        zofka.move(130);
+    }
+
+    private void nakresliDomecek() {
+        nakresliCtverec();
 
 
+        zofka.turnRight(30);
+        zofka.move(100);
+        zofka.turnRight(120);
+        zofka.move(100);
+    }
 
+    private void nakresliCtverec() {
+        for (int i = 0; i < 4; i++) {
+            zofka.turnRight(90);
+            zofka.move(100);
+        }
+    }
 
 
     public static void main(String[] args) {
